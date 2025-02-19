@@ -1,0 +1,31 @@
+{
+  "name": "cypress-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:open:dev": "cross-env BASE_URL=https://academy-dev.dartle.app/ cypress open",
+    "cy:run:dev": "cross-env BASE_URL=https://academy-dev.dartle.app/ cypress run",
+    "cy:open:prod": "cross-env BASE_URL=https://academy.dartle.app/ cypress open",
+    "cy:run:prod": "cross-env BASE_URL=https://academy.dartle.app/ cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.9.3",
+    "cross-env": "^7.0.3",
+    "cypress": "^13.16.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-v10-preserve-cookie": "^1.2.1",
+    "cypress-xpath": "^2.0.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.1.0",
+    "typescript": "^5.6.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1"
+  }
+}

@@ -1,0 +1,4 @@
+name: Run Cypress Tests
+on:[push]
+jobs:
+install:
