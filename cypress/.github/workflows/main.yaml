@@ -1,4 +1,38 @@
-name: Run Cypress Tests
-on:[push]
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main  # Runs when code is pushed to 'main' branch
+  pull_request:
+    branches:
+      - main  # Runs on PRs to 'main' branch
+
 jobs:
-install:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18  # Use the Node.js version your project requires
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Cypress Tests
+        run: npm run cy:run:dev  # Runs Cypress tests for dev environment
+
+      - name: Upload Cypress Videos & Screenshots (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-results
+          path: |
+            cypress/videos
+            cypress/screenshots
