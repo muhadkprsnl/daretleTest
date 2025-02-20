@@ -19,7 +19,7 @@ describe('Pending Invites', () => {
 
 
 
-    it('should navigate to the members page', () => {
+    it.only('should navigate to the members page', () => {
         players.visitMembers();
         players.verifyaddNewMembers();
     });

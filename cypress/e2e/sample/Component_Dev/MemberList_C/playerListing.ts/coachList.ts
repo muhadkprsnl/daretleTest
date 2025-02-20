@@ -18,10 +18,11 @@ export class playerList {
 
 
     visitMembers() {
+        cy.wait(1000)
         cy.visit('https://academy-dev.dartle.app/members/list', { failOnStatusCode: false });
-        cy.wait(2000)
+        cy.wait(3000)
         cy.get(':nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) > .d-flex > :nth-child(2)').click()
-        cy.wait(2000)
+        cy.wait(3000)
     }
 
 

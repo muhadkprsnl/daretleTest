@@ -36,3 +36,11 @@ jobs:
           path: |
             cypress/videos
             cypress/screenshots
+
+
+            name: Cypress Tests
+
+
+
+
+    
