@@ -12,14 +12,14 @@ describe('Pending Invites', () => {
     beforeEach(() => {
         // Assuming cy.login is a valid custom command
         cy.intercept('GET', '/ngsw.json*', { statusCode: 404 });
-        //cy.login('support@dartle.app', 'P@ssw0rd');
+        //cy.login('academy@roninaks.com', 'P@ssw0rd');
     });
 
 
 
 
 
-    it.only('should navigate to the members page', () => {
+    it('should navigate to the members page', () => {
         players.visitMembers();
         players.verifyaddNewMembers();
     });
@@ -60,16 +60,9 @@ describe('Pending Invites', () => {
     it('Verify that Coach is Assigned the group', () => {
         players.visitMembers();
         players.clickon3DotOption();
-        players.threeopttionResendInvit();
-        players.resendInvitaionMsg();
-    });
-
-
-    it('Verify that Coach is Assigned the group', () => {
-        players.visitMembers();
-        players.clickon3DotOption();
         players.threeopttionAssign();
         players.assign_A_Group();
+        players.assignedToasterSuccesskMsg()
     });
 
     it('Verify that close the popup of Assign Group', () => {
@@ -87,9 +80,10 @@ describe('Pending Invites', () => {
         players.clickonAssigngrp();
         players.clickProceedAssign();
         players.assign_A_Group();
+        players.assignedToasterFailedkMsg();
     });
 
-    it('Verify that close the popup of marked Members Assign Group', () => {
+    it.only('Verify that close the popup of marked Members Assign Group', () => {
         players.visitMembers();
         players.clickonAssigngrp();
         players.closeAssignGrpPopup();

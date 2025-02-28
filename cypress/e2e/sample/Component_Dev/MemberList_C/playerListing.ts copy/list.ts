@@ -18,10 +18,7 @@ export class playerList {
 
 
     visitMembers() {
-        //cy.wait(1000)
-        cy.visit('https://academy-dev.dartle.app/members/list', { failOnStatusCode: false });
-        cy.wait(3000)
-        cy.get(':nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) > .d-flex > :nth-child(2)').click()
+        cy.visit('https://academy.dartle.app/members/list', { failOnStatusCode: false });
         cy.wait(2000)
     }
 
@@ -70,7 +67,7 @@ export class playerList {
 
     threeopttionResendInvit() {
         // Select the "Delete" option
-        cy.contains('div', "Resend Coach's Invitation").click();
+        cy.contains('div', "Resend Member's Invitation").click();
     }
 
     threeopttionAssign() {
@@ -112,11 +109,11 @@ export class playerList {
     //other  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     verifyaddNewMembers() {
-        cy.url().should('contain', 'https://academy-dev.dartle.app/members/list'); // Ensure login was successful
+        cy.url().should('contain', 'https://academy.dartle.app/members/list'); // Ensure login was successful
     }
 
     verifyCopyInvitation() {
-        cy.url().should('contain', 'https://academy-dev.dartle.app/self-registration/6451f714413fa18c66462066');
+        cy.url().should('contain', ' https://academy.dartle.app/self-registration/607e9ef5461623995dd66d9c');
     }
 
     storedSearchName: string | undefined;
@@ -179,21 +176,6 @@ export class playerList {
 
     clickProceedAssign() {
         cy.get(this.proceedAssignBtn).click();
-    }
-
-
-    assignedToasterSuccesskMsg() {
-        cy.get(this.toaster)
-            .should('be.visible')
-            .and('contain.text', 'Success!')
-            .and('contain.text', 'test coach 3 have been successfully added to the group Testing 1.3.33');
-    }
-
-    assignedToasterFailedkMsg() {
-        cy.get(this.toaster)
-            .should('be.visible')
-            .and('contain.text', 'Error!')
-            .and('contain.text', 'No eligible members to add to the group Under 10.');
     }
 
 
