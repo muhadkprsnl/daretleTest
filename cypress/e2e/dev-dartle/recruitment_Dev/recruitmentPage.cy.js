@@ -1,6 +1,6 @@
-import { myAcademyPlayers } from "../../sample/Dev_Component/recruitment/myAcademy"
-import { otherAcademyPlayers } from "../../sample/Dev_Component/recruitment/otherAcademy"
-import { playerList } from "../../sample/Dev_Component/MemberList_C/playerListing.ts/adminList"
+import { myAcademyPlayers } from "../../sample/Dev_Component/recruitment/myAcademy.ts"
+import { otherAcademyPlayers } from "../../sample/Dev_Component/recruitment/otherAcademy.ts"
+import { playerList } from "../../sample/Dev_Component/MemberList_C/playerListing.ts/adminList.ts"
 
 
 

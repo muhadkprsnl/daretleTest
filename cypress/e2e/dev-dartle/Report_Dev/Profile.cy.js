@@ -1,4 +1,4 @@
-import { Profile } from "../../sample/dev-dartleComponent/Profile/profile"
+import { Profile } from "../../sample/Dev_Component/Report/profile"
 
 describe('Profile-Dev', () => {
     const profileInfo = new Profile();
