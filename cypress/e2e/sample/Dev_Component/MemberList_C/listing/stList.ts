@@ -1,6 +1,6 @@
 import { tr } from "@faker-js/faker/.";
 
-export class playerList {
+export class playerTableListing {
 
 
     //Selectors  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -15,15 +15,20 @@ export class playerList {
     filterBtn = '.filter-name';
     addMember = '.mb-5 > .mat-ripple > .bi';
     searchedName = ':nth-child(1) > .card-body';
+    cookiesBtn = ".btn.btn-primary";
 
 
     visitMembers() {
-        cy.visit('https://academy.dartle.app/members/list', { failOnStatusCode: false });
+        cy.visit('https://academy-dev.dartle.app/members/list', { failOnStatusCode: false });
         cy.wait(2000)
     }
 
 
     //click Action  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    clickonaAcceptCookies() {
+        cy.get(this.cookiesBtn).click({ multiple: true });
+    }
+
     clickonCopyInvite() {
         cy.get(this.copyInvite).click()
     }
@@ -109,11 +114,11 @@ export class playerList {
     //other  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     verifyaddNewMembers() {
-        cy.url().should('contain', 'https://academy.dartle.app/members/list'); // Ensure login was successful
+        cy.url().should('contain', 'https://academy-dev.dartle.app/members/list'); // Ensure login was successful
     }
 
     verifyCopyInvitation() {
-        cy.url().should('contain', ' https://academy.dartle.app/self-registration/607e9ef5461623995dd66d9c');
+        cy.url().should('contain', 'https://academy-dev.dartle.app/self-registration/6451f714413fa18c66462066');
     }
 
     storedSearchName: string | undefined;

@@ -1,4 +1,4 @@
-import { playerList } from "../../sample/Component_Dev/MemberList_C/playerListing.ts/adminList"
+import { playerList } from "../../../sample/Dev_Component/MemberList_C/listing/adminList.ts"
 // import { otherAcademyPlayers } from "../../sample/pro-dartleComponent/recruitment/otherAcademy"
 // import { myAcademyPlayers } from "../../sample/pro-dartleComponent/recruitment/myAcademy"
 

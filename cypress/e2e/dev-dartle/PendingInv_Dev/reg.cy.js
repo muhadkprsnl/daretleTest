@@ -1,10 +1,10 @@
-import { personalInfo } from "../../sample/pro-dartleComponent/pro-PI/regComponents/persomalInfo"
-import { parentalInfo } from "../../sample/pro-dartleComponent/pro-PI/regComponents/parentalInfo"
-import { addionalInfo } from "../../sample/pro-dartleComponent/pro-PI/regComponents/additionalInfo"
-import { navigation } from "../../sample/pro-dartleComponent/pro-PI/regComponents/navigation"
-import { addPlayer } from "../../sample/pro-dartleComponent/pro-PI/regComponents/addPlayer"
-import { randomDetails } from "../../sample/pro-dartleComponent/pro-PI/regComponents/randomdetails"
-import { File } from "../../sample/pro-dartleComponent/pro-PI/regComponents/File"
+import { personalInfo } from "../../sample/Dev_Component/PendingInvites/persomalInfo.ts"
+import { parentalInfo } from "../../sample/Dev_Component/PendingInvites/parentalInfo.ts"
+import { addionalInfo } from "../../sample/Dev_Component/PendingInvites/additionalInfo.ts"
+import { navigation } from "../../sample/Dev_Component/PendingInvites/navigation.ts"
+import { addPlayer } from "../../sample/Dev_Component/PendingInvites/addPlayer.ts"
+import { randomDetails } from "../../sample/Dev_Component/PendingInvites/randomdetails.ts"
+import { File } from "../../sample/Pro_Component/pro-PI/regComponents/File.ts"
 
 
 describe('Pending Invites', () => {

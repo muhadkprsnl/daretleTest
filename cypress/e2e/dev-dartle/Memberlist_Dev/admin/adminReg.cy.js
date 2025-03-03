@@ -1,9 +1,9 @@
-import { adminInfo } from "../../sample/pro-dartleComponent/membersListing/adminReg.ts/adminInfo"
-import { addionalInfo } from "../../sample/pro-dartleComponent/membersListing/adminReg.ts/additionalInfo"
-import { navigation } from "../../sample/pro-dartleComponent/membersListing/adminReg.ts/navigation"
-import { addAdminClass } from "../../sample/pro-dartleComponent/membersListing/adminReg.ts/addAdmin"
-import { randomDetails } from "../../sample/pro-dartleComponent/membersListing/adminReg.ts/randomdetails"
-import { File } from "../../sample/pro-dartleComponent/membersListing/adminReg.ts/File"
+import { adminInfo } from "../../../sample/Dev_Component/MemberList_C/adminReg/adminInfo.ts"
+import { addionalInfo } from "../../../sample/Dev_Component/MemberList_C/adminReg/additionalInfo.ts"
+import { navigation } from "../../../sample/Dev_Component/MemberList_C/adminReg/navigation.ts"
+import { addAdminClass } from "../../../sample/Dev_Component/MemberList_C/adminReg/addAdmin.ts"
+import { randomDetails } from "../../../sample/Dev_Component/MemberList_C/adminReg/randomdetails.ts"
+import { File } from "../../../sample/Pro_Component/pro-PI/regComponents/File.ts"
 
 
 describe('Pending Invites', () => {

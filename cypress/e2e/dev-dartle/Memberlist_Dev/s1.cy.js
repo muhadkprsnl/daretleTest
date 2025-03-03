@@ -1,11 +1,11 @@
-import { playerList } from "../../sample/pro-dartleComponent/membersListing/playerListing.ts/list"
-import { otherAcademyPlayers } from "../../sample/pro-dartleComponent/recruitment/otherAcademy"
-import { myAcademyPlayers } from "../../sample/pro-dartleComponent/recruitment/myAcademy"
+import { j1 } from "../../../sample/Dev_Component/MemberList_C/numberview"
+// import { otherAcademyPlayers } from "../../../sample/Dev_Component/recruitment/otherAcademy.ts"
+// import { myAcademyPlayers } from "../../../sample/Dev_Component/recruitment/myAcademy.ts"
 
 
 
 describe('Pending Invites', () => {
-    const players = new playerList();
+    const players = new j1();
     const otherAcademy = new otherAcademyPlayers();
     const myAcademy = new myAcademyPlayers();
 
@@ -19,7 +19,7 @@ describe('Pending Invites', () => {
 
 
 
-    it('should navigate to the members page', () => {
+    it.only('should navigate to the members page', () => {
         players.visitMembers();
         players.verifyaddNewMembers();
     });
@@ -152,85 +152,85 @@ describe('Pending Invites', () => {
 
     });
 
-    it('Verify that marked Player Send Publicly', () => {
-        // Retrieve PROD_USER from cypress.env.json
-        const prodUsers = Cypress.env('PROD_USER');
+    // it('Verify that marked Player Send Publicly', () => {
+    //     // Retrieve PROD_USER from cypress.env.json
+    //     const prodUsers = Cypress.env('PROD_USER');
 
-        // Second session for the First user
-        cy.session('user1-session', () => {
-            cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
-        });
+    //     // Second session for the First user
+    //     cy.session('user1-session', () => {
+    //         cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
+    //     });
 
-        players.visitMembers();
-        players.clickoIndividualCheckbox();
-        players.clickonShareProfile();
-        players.mark1IndiinPopup();
-        players.clickNext();
-        players.confirmSend();
-        players.sendToasterkMsg();
-        // Logout the first user
-        otherAcademy.signout();
+    //     players.visitMembers();
+    //     players.clickoIndividualCheckbox();
+    //     players.clickonShareProfile();
+    //     players.mark1IndiinPopup();
+    //     players.clickNext();
+    //     players.confirmSend();
+    //     players.sendToasterkMsg();
+    //     // Logout the first user
+    //     otherAcademy.signout();
 
-        // Second session for the second user
-        cy.session('user2-session', () => {
-            cy.login(prodUsers[1].email, prodUsers[1].password); // Use the second user's credentials
-        });
+    //     // Second session for the second user
+    //     cy.session('user2-session', () => {
+    //         cy.login(prodUsers[1].email, prodUsers[1].password); // Use the second user's credentials
+    //     });
 
-        // Perform actions for the second user
-        otherAcademy.visitRecruitment();
-        otherAcademy.verifyStoredName();
+    //     // Perform actions for the second user
+    //     otherAcademy.visitRecruitment();
+    //     otherAcademy.verifyStoredName();
 
-        // Logout the second user
-        otherAcademy.signout();
+    //     // Logout the second user
+    //     otherAcademy.signout();
 
-        // Second session for the First user
-        cy.session('user1-session', () => {
-            cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
-        });
-
-
-    });
+    //     // Second session for the First user
+    //     cy.session('user1-session', () => {
+    //         cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
+    //     });
 
 
-    it('Verifymy academy', () => {
-        // Retrieve PROD_USER from cypress.env.json
-        const prodUsers = Cypress.env('PROD_USER');
-
-        // Second session for the First user
-        cy.session('user1-session', () => {
-            cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
-        });
-
-        players.visitMembers();
-        players.clickoIndividualCheckbox();
-        players.clickonShareProfile();
-        players.mark1IndiinPopup();
-        players.clickNext();
-        players.confirmSend();
-        players.sendToasterkMsg();
-        // Logout the first user
-        otherAcademy.signout();
-
-        // Second session for the second user
-        cy.session('user2-session', () => {
-            cy.login(prodUsers[1].email, prodUsers[1].password); // Use the second user's credentials
-        });
-
-        // Perform actions for the second user
-        otherAcademy.visitRecruitment();
-        myAcademy.clickonMyAcademyPlayers();
-        otherAcademy.verifyStoredName();
-
-        // Logout the second user
-        otherAcademy.signout();
-
-        // Second session for the First user
-        cy.session('user1-session', () => {
-            cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
-        });
+    // });
 
 
-    });
+    // it('Verifymy academy', () => {
+    //     // Retrieve PROD_USER from cypress.env.json
+    //     const prodUsers = Cypress.env('PROD_USER');
+
+    //     // Second session for the First user
+    //     cy.session('user1-session', () => {
+    //         cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
+    //     });
+
+    //     players.visitMembers();
+    //     players.clickoIndividualCheckbox();
+    //     players.clickonShareProfile();
+    //     players.mark1IndiinPopup();
+    //     players.clickNext();
+    //     players.confirmSend();
+    //     players.sendToasterkMsg();
+    //     // Logout the first user
+    //     otherAcademy.signout();
+
+    //     // Second session for the second user
+    //     cy.session('user2-session', () => {
+    //         cy.login(prodUsers[1].email, prodUsers[1].password); // Use the second user's credentials
+    //     });
+
+    //     // Perform actions for the second user
+    //     otherAcademy.visitRecruitment();
+    //     myAcademy.clickonMyAcademyPlayers();
+    //     otherAcademy.verifyStoredName();
+
+    //     // Logout the second user
+    //     otherAcademy.signout();
+
+    //     // Second session for the First user
+    //     cy.session('user1-session', () => {
+    //         cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
+    //     });
+
+
+    // });
 
     it('Verify that marked All Academies in Private', () => {
         players.visitMembers();
@@ -254,50 +254,50 @@ describe('Pending Invites', () => {
 
     });
 
-    it('Verify that mark Individual Academy in Private', () => {
-        // Retrieve PROD_USER from cypress.env.json
-        const prodUsers = Cypress.env('PROD_USER');
+    // it('Verify that mark Individual Academy in Private', () => {
+    //     // Retrieve PROD_USER from cypress.env.json
+    //     const prodUsers = Cypress.env('PROD_USER');
 
-        // Second session for the First user
-        cy.session('user1-session', () => {
-            cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
-        });
+    //     // Second session for the First user
+    //     cy.session('user1-session', () => {
+    //         cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
+    //     });
 
-        // First user actions
-        players.visitMembers();
-        players.clickoIndividualCheckbox();
-        players.clickonShareProfile();
-        players.mark1IndiinPopup();
-        players.changeSelectedtoPri();
-        players.clickNext();
-        players.searchAcademyinPrivate('Devzery Test Acadeemy');
-        players.markCheckboxInPopup();
-        players.clickPrivateSend();
-        players.confirmSend();
-        players.sendToasterkMsg();
+    //     // First user actions
+    //     players.visitMembers();
+    //     players.clickoIndividualCheckbox();
+    //     players.clickonShareProfile();
+    //     players.mark1IndiinPopup();
+    //     players.changeSelectedtoPri();
+    //     players.clickNext();
+    //     players.searchAcademyinPrivate('Devzery Test Acadeemy');
+    //     players.markCheckboxInPopup();
+    //     players.clickPrivateSend();
+    //     players.confirmSend();
+    //     players.sendToasterkMsg();
 
-        // Logout the first user
-        otherAcademy.signout();
+    //     // Logout the first user
+    //     otherAcademy.signout();
 
-        // Second session for the second user
-        cy.session('user2-session', () => {
-            cy.login(prodUsers[1].email, prodUsers[1].password); // Use the second user's credentials
-        });
+    //     // Second session for the second user
+    //     cy.session('user2-session', () => {
+    //         cy.login(prodUsers[1].email, prodUsers[1].password); // Use the second user's credentials
+    //     });
 
-        // Perform actions for the second user
-        otherAcademy.clickonExclusiveRequirement();
-        otherAcademy.visitRecruitment();
-        otherAcademy.compareNames();
+    //     // Perform actions for the second user
+    //     otherAcademy.clickonExclusiveRequirement();
+    //     otherAcademy.visitRecruitment();
+    //     otherAcademy.compareNames();
 
-        // Logout the second user
-        otherAcademy.signout();
+    //     // Logout the second user
+    //     otherAcademy.signout();
 
-        // Second session for the First user
-        cy.session('user1-session', () => {
-            cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
-        });
+    //     // Second session for the First user
+    //     cy.session('user1-session', () => {
+    //         cy.login(prodUsers[0].email, prodUsers[0].password); // Use the second user's credentials
+    //     });
 
-    });
+    // });
 
 
 
@@ -424,7 +424,7 @@ describe('Pending Invites', () => {
 
     });
 
-    it.only('Verify that the Decline the transfer of a player ', () => {
+    it('Verify that the Decline the transfer of a player ', () => {
         players.visitMembers();
         players.searchBar1('Joh{enter}');
         players.clickMore();

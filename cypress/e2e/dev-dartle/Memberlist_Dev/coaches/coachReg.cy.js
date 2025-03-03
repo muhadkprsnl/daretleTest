@@ -1,9 +1,9 @@
-import { coachPersonalInfo } from "../../sample/pro-dartleComponent/membersListing/coachReg.ts/persomalInfo"
-import { addionalInfo } from "../../sample/pro-dartleComponent/membersListing/coachReg.ts/additionalInfo"
-import { navigation } from "../../sample/pro-dartleComponent/membersListing/coachReg.ts/navigation"
-import { addCoach } from "../../sample/pro-dartleComponent/membersListing/coachReg.ts/addCoach"
-import { randomDetails } from "../../sample/pro-dartleComponent/membersListing/coachReg.ts/randomdetails"
-import { File } from "../../sample/pro-dartleComponent/membersListing/coachReg.ts/File"
+import { coachPersonalInfo } from "../../../sample/Dev_Component/MemberList_C/coachReg/persomalInfo.ts"
+import { addionalInfo } from "../../../sample/Dev_Component/MemberList_C/coachReg/additionalInfo.ts"
+import { navigation } from "../../../sample/Dev_Component/MemberList_C/coachReg/navigation.ts"
+import { addCoach } from "../../../sample/Dev_Component/MemberList_C/coachReg/addCoach.ts"
+import { randomDetails } from "../../../sample/Dev_Component/MemberList_C/coachReg/randomdetails.ts"
+import { File } from "../../../sample/Dev_Component/MemberList_C/coachReg/File.ts"
 
 
 describe('Pending Invites', () => {

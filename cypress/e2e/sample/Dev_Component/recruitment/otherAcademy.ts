@@ -1,16 +1,16 @@
-import { playerList } from "../MemberList_C/playerListing.ts/stList"
+import { playerTableListing } from "../MemberList_C/listing/stList"
 
-const players = new playerList();
+const players = new playerTableListing();
 
 export class otherAcademyPlayers {
 
     visitRecruitment() {
-        cy.visit('https://academy.dartle.app/recruitment', { failOnStatusCode: false });
+        cy.visit('https://academy-dev.dartle.app/recruitment', { failOnStatusCode: false });
         cy.wait(2000)
     }
 
     verifyRecruitment() {
-        cy.url().should('contain', 'https://academy.dartle.app/recruitment'); // Ensure login was successful
+        cy.url().should('contain', 'https://academy-dev.dartle.app//recruitment'); // Ensure login was successful
     }
 
     signout() {

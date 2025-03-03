@@ -1,9 +1,9 @@
-import { personalInfo } from "../../sample/dev-dartleComponent/PendingInvites/persomalInfo"
-import { parentalInfo } from "../../sample/dev-dartleComponent/PendingInvites/parentalInfo"
-import { addionalInfo } from "../../sample/dev-dartleComponent/PendingInvites/additionalInfo"
-import { navigation } from "../../sample/dev-dartleComponent/PendingInvites/navigation"
-import { addPlayer } from "../../sample/dev-dartleComponent/PendingInvites/addPlayer"
-import { randomDetails } from "../../sample/dev-dartleComponent/PendingInvites/randomdetails"
+import { personalInfo } from "../../sample/Dev_Component/PendingInvites/persomalInfo.ts"
+import { parentalInfo } from "../../sample/Dev_Component/PendingInvites/parentalInfo.ts"
+import { addionalInfo } from "../../sample/Dev_Component/PendingInvites/additionalInfo.ts"
+import { navigation } from "../../sample/Dev_Component/PendingInvites/navigation.ts"
+import { addPlayer } from "../../sample/Dev_Component/PendingInvites/addPlayer.ts"
+import { randomDetails } from "../../sample/Dev_Component/PendingInvites/randomdetails.ts"
 
 describe('Pending Invites', () => {
     const PI_PersonalInfo = new personalInfo();
