@@ -1,13 +1,13 @@
 import { myAcademyPlayers } from "../../sample/Dev_Component/recruitment/myAcademy.ts"
 import { otherAcademyPlayers } from "../../sample/Dev_Component/recruitment/otherAcademy.ts"
-import { playerList } from "../../sample/Dev_Component/MemberList_C/playerListing.ts/adminList.ts"
+import { playerTableListing } from "../../sample/Dev_Component/MemberList_C/listing/stList.ts"
 
 
 
 describe('Pending Invites', () => {
     const myAcademy = new myAcademyPlayers();
     const otherAcademy = new otherAcademyPlayers();
-    const players = new playerList();
+    const players = new playerTableListing();
 
     beforeEach(() => {
         // Assuming cy.login is a valid custom command
@@ -27,7 +27,7 @@ describe('Pending Invites', () => {
 
     //Public Recruitment>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    it.only('verify that remove the interest from other Academy', () => {
+    it('verify that remove the interest from other Academy', () => {
         otherAcademy.visitRecruitment();
         otherAcademy.clickRemoveRequest();
         otherAcademy.clickonConfirm();
