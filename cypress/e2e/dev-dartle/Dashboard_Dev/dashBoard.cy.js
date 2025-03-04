@@ -1,5 +1,5 @@
-import { loginPage } from "../sample/login_page"
-import { dashBoard } from "../sample/dashboard"
+import { loginPage } from "../../sample/Dev_Component/Login/login_page.ts"
+import { dashBoard } from "../../sample/Dev_Component/Login/login_page.ts"
 
 
 

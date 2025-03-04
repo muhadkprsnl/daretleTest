@@ -1,4 +1,4 @@
-import { loginPage } from "../sample/login_page"
+import { loginPage } from "../../sample/Dev_Component/Login/login_page.ts"
 
 
 let loginPage1 = new loginPage()

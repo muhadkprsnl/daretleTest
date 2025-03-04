@@ -1,10 +1,10 @@
-import { personalInfo } from "../../sample/pro-dartleComponent/membersListing/studentRegComponent/persomalInfo"
-import { parentalInfo } from "../../sample/pro-dartleComponent/membersListing/studentRegComponent/parentalInfo"
-import { addionalInfo } from "../../sample/pro-dartleComponent/membersListing/studentRegComponent/additionalInfo"
-import { navigation } from "../../sample/pro-dartleComponent/membersListing/studentRegComponent/navigation"
-import { addPlayer } from "../../sample/pro-dartleComponent/membersListing/studentRegComponent/addPlayer"
-import { randomDetails } from "../../sample/pro-dartleComponent/membersListing/studentRegComponent/randomdetails"
-import { File } from "../../sample/pro-dartleComponent/membersListing/studentRegComponent/File"
+import { personalInfo } from "../../../sample/Dev_Component/MemberList_C/studentReg/persomalInfo.ts"
+import { parentalInfo } from "../../../sample/Dev_Component/MemberList_C/studentReg/parentalInfo.ts"
+import { addionalInfo } from "../../../sample/Dev_Component/MemberList_C/studentReg/additionalInfo.ts"
+import { navigation } from "../../../sample/Dev_Component/MemberList_C/studentReg/navigation.ts"
+import { addPlayer } from "../../../sample/Dev_Component/MemberList_C/studentReg/addPlayer.ts"
+import { randomDetails } from "../../../sample/Dev_Component/MemberList_C/studentReg/randomdetails.ts"
+import { File } from "../../../sample/Dev_Component/MemberList_C/studentReg/File.ts"
 
 
 describe('Pending Invites', () => {
